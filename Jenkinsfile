@@ -1,7 +1,12 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'Node 18' // Replace with the name you used in Global Tool Configuration
+    }
+
     environment {
+        // Add Node manually to PATH in case it's needed by shell directly
         PATH = "/opt/homebrew/bin:$PATH"
     }
 
