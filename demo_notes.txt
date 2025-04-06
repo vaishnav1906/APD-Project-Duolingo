@@ -1,0 +1,8 @@
+# Demo Notes
+1. Push a change to GitHub (edit a text in app.js)
+2. Jenkins automatically triggers pipeline:
+   - Checkout -> Install -> Test -> Deploy
+3. App runs on localhost:4000
+4. Show GitHub repo and Jenkins dashboard live.
+
+Data Flow: GitHub (code pushed) -> Jenkins (pulls & builds) -> App (runs on server)

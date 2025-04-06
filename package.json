@@ -1,0 +1,13 @@
+{
+  "name": "duolingo-apd-project",
+  "version": "1.0.0",
+  "description": "Mini Duolingo Clone for CI/CD Demo",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
