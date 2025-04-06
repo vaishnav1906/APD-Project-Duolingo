@@ -2,18 +2,17 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'Node 18' // Replace with the name you used in Global Tool Configuration
+        nodejs 'Node 18' // Make sure this matches your Global Tool Configuration
     }
 
     environment {
-        // Add Node manually to PATH in case it's needed by shell directly
         PATH = "/opt/homebrew/bin:$PATH"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/vaishnav1906/APD-Project-Duolingo'
+                git branch: 'main', url: 'https://github.com/vaishnav1906/APD-Project-Duolingo.git'
             }
         }
 
