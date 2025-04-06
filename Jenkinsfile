@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "/opt/homebrew/bin:$PATH"
+    }
+
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/vaishnav1906/APD-Project-Duolingo.git'
+                git 'https://github.com/vaishnav1906/APD-Project-Duolingo'
             }
         }
 
