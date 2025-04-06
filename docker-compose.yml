@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"  # Expose port 3000 for the frontend
+    volumes:
+      - ./frontend:/app  # Mount the frontend code for live changes (if needed)
+    working_dir: /app
+    command: npm start  # Ensure the frontend is running with npm start
+    depends_on:
+      - backend  # Make sure backend is up before frontend starts
+
+  backend:
+    build:
+      context: .  # Build from the root project
+      dockerfile: backend/Dockerfile  # Specify Dockerfile location for backend
+    ports:
+      - "4000:4000"  # Expose port 4000 for the backend
+    volumes:
+      - ./backend:/app  # Mount the backend code for live changes (if needed)
+    working_dir: /app
+    command: npm start  # Start backend server
