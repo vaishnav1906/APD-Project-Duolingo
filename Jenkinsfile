@@ -4,22 +4,37 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/duolingo_apd_project.git'
+                git 'https://github.com/vaishnav1906/APD-Project-Duolingo'
             }
         }
-        stage('Install') {
+
+        stage('Install Frontend') {
             steps {
-                sh 'npm install'
+                dir('frontend') {
+                    sh 'npm install'
+                }
             }
         }
-        stage('Test') {
+
+        stage('Install Backend') {
             steps {
-                sh 'npm test'
+                dir('backend') {
+                    sh 'npm install'
+                }
             }
         }
-        stage('Deploy') {
+
+        stage('Build Frontend') {
             steps {
-                sh 'npm start &'
+                dir('frontend') {
+                    sh 'npm run build'
+                }
+            }
+        }
+
+        stage('Run with Docker') {
+            steps {
+                sh 'docker-compose up -d --build'
             }
         }
     }
