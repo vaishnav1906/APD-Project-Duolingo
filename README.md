@@ -17,3 +17,7 @@ This is a mini Duolingo clone built with Node.js and Express.js to demonstrate A
 ## CI/CD Flow
 1. Push code to GitHub
 2. Jenkins pulls code, installs packages, runs tests, and deploys app automatically.
+
+
+## Presentation
+https://www.canva.com/design/DAGj4THTCJQ/PvT84PCufIZvSyu2F1prTw
