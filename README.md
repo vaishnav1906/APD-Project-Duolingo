@@ -20,4 +20,4 @@ This is a mini Duolingo clone built with Node.js and Express.js to demonstrate A
 
 
 ## Presentation
-https://www.canva.com/design/DAGj4THTCJQ/PvT84PCufIZvSyu2F1prTw
+[https://www.canva.com/design/DAGj4THTCJQ/PvT84PCufIZvSyu2F1prTw](https://www.canva.com/design/DAGj4THTCJQ/PvT84PCufIZvSyu2F1prTw/edit?utm_content=DAGj4THTCJQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
